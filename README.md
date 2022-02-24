@@ -31,6 +31,12 @@ Grab the latest [ThunderDesign.Net-PCL.SQLite NuGet](https://www.nuget.org/packa
 
 Use the `-version` option to specify an [older version](https://www.nuget.org/packages/ThunderDesign.Net-PCL.SQLite#versions-tab) to install.
 
+## Examples
+
+*(TIP: Clone repo, open the solution, build it and run sample app.)*
+- WinForms
+  - [SimpleContacts Examples](https://github.com/ThunderDesign/ThunderDesign.Net-PCL.SQLite/tree/main/samples/WinForms/SimpleContacts)
+
 ## Please Contribute!
 
 This is an open source project that welcomes contributions/suggestions/bug reports from those who use it. If you have any ideas on how to improve the library, please [post an issue here on GitHub](https://github.com/ThunderDesign/ThunderDesign.Net-PCL.SQLite/issues). Please check out the [How to Contribute](https://github.com/ThunderDesign/ThunderDesign.Net-PCL.SQLite/blob/main/.github/CONTRIBUTING.md).
