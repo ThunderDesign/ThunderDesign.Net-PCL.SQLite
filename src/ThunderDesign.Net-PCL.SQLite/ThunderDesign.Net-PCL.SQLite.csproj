@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>ThunderDesign.Net_PCL.SQLite</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+    <PackageReference Include="ThunderDesign.Net-PCL.Threading" Version="1.0.3" />
+    <PackageReference Include="ThunderDesign.Net-PCL.ToolBox" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>
