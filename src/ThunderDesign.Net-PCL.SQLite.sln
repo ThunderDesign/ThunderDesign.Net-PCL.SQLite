@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32127.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThunderDesign.Net-PCL.SQLite", "ThunderDesign.Net-PCL.SQLite\ThunderDesign.Net-PCL.SQLite.csproj", "{D9F321AE-3822-4EE5-BAB3-2458A939A6BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9F321AE-3822-4EE5-BAB3-2458A939A6BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9F321AE-3822-4EE5-BAB3-2458A939A6BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9F321AE-3822-4EE5-BAB3-2458A939A6BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9F321AE-3822-4EE5-BAB3-2458A939A6BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F78D0CF-8527-4860-B8FD-B5A293CBC7EB}
+	EndGlobalSection
+EndGlobal
