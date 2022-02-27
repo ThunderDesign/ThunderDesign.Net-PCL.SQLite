@@ -35,7 +35,9 @@ Use the `-version` option to specify an [older version](https://www.nuget.org/pa
 
 *(TIP: Clone repo, open the solution, build it and run sample app.)*
 - WinForms
-  - [SimpleContacts Examples](https://github.com/ThunderDesign/ThunderDesign.Net-PCL.SQLite/tree/main/samples/WinForms/SimpleContacts)
+  - [SimpleContacts Example](https://github.com/ThunderDesign/ThunderDesign.Net-PCL.SQLite/tree/main/samples/WinForms/SimpleContacts)
+- Xamarin
+  - [SimpleContacts Example](https://github.com/ThunderDesign/ThunderDesign.Net-PCL.SQLite/tree/main/samples/Xamarin/SimpleContacts)
 
 ## Please Contribute!
 
