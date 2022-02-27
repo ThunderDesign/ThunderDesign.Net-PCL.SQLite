@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimpleContacts.Controls.FloatingActionButton"
+             xmlns:sh="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
+             x:Name="FloatingActionButtonRoot">
+
+    <sh:Shadows x:Name="Shadows"
+                CornerRadius="30"
+                Scale="0">
+        <sh:Shadows.Shades>
+            <sh:ImmutableShades>
+                <sh:Shade Offset="0, 10"
+                          Color="Black">
+                    <sh:Shade.Opacity>
+                        <OnPlatform x:TypeArguments="system:Double">
+                            <OnPlatform.Platforms>
+                                <On Platform="iOS">0.4</On>
+                                <On Platform="Android">0.5</On>
+                            </OnPlatform.Platforms>
+                        </OnPlatform>
+                    </sh:Shade.Opacity>
+                </sh:Shade>
+            </sh:ImmutableShades>
+        </sh:Shadows.Shades>
+
+        <Button ImageSource="{Binding ImageSource, Source={x:Reference FloatingActionButtonRoot}}"
+                Clicked="Button_Clicked"
+                BackgroundColor="{Binding BackgroundColor, Source={x:Reference FloatingActionButtonRoot}}"
+                Command="{Binding Command, Source={x:Reference FloatingActionButtonRoot}}"
+                FontSize="50"
+                CornerRadius="28"
+                WidthRequest="56"
+                HeightRequest="56"
+                Padding="0"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+    </sh:Shadows>
+    
+</ContentView>
