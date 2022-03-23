@@ -14,15 +14,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Fonts\fa-solid-900.ttf" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="Fonts\fa-solid-900.ttf" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Sharpnado.Shadows" Version="1.2.0" />
+    <PackageReference Include="ThunderDesign.Xamarin.Forms.FloatingActionButton" Version="1.0.0" />
     <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.0" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.7.1" />
@@ -33,9 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Controls\FloatingActionButton.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\ContactPopup.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
