@@ -9,14 +9,7 @@
     x:TypeArguments="vm:ContactsViewModel"
     xmlns:v="clr-namespace:SimpleContacts.Views"
     xmlns:vm="clr-namespace:SimpleContacts.ViewModels"
-    xmlns:c="clr-namespace:SimpleContacts.Controls">
-    <ContentPage.Resources>
-        <FontImageSource x:Key="FontImageSourcePlusGlyph"
-                         Glyph="{x:Static f:FontAwesomeIcons.Plus}"
-                         Color="White"
-                         Size="20"
-                         FontFamily="FontAwesomeSolid"/>
-    </ContentPage.Resources>
+    xmlns:fab="clr-namespace:ThunderDesign.Xamarin.Forms.FloatingActionButton.Controls;assembly=ThunderDesign.Xamarin.Forms.FloatingActionButton">
     <ContentPage.Content>
         <RefreshView Command="{Binding Source={RelativeSource AncestorType={x:Type v:ContactsView}}, Path=RefreshViewCommand}" IsRefreshing="{Binding IsBusy, Mode=OneWay}">
             <Grid>
@@ -80,10 +73,10 @@
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
-                <c:FloatingActionButton
+                <fab:FloatingActionButton
                     Grid.Column="0" Grid.Row="1"
-                    BackgroundColor="{StaticResource Primary}"
-                    ImageSource="{StaticResource FontImageSourcePlusGlyph}"
+                    Text="+"
+                    Style="{StaticResource RoundFAB}"
                     Command="{Binding Source={RelativeSource AncestorType={x:Type v:ContactsView}}, Path=CreateViewCommandAsync}"		
                     VerticalOptions="End"
                     HorizontalOptions="End"
