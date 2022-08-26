@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ThunderDesign.Net-PCL.ToolBox" Version="1.0.0" />
+    <PackageReference Include="ThunderDesign.Net-PCL.ToolBox" Version="1.0.4" />
   </ItemGroup>
 
   <ItemGroup>
