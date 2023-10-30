@@ -27,9 +27,9 @@ namespace ThunderDesign.Net.SQLite.Bridges
         #endregion
 
         #region methods
-        public override void Add(TValue value)
+        public new void Add(TValue value)
         {
-            _ReaderWriterLockSlim.EnterWriteLock();
+            _ReaderWriterLockSlim.EnterUpgradeableReadLock();
             try
             {
                 if (!IsKeyAutoIncrement)
@@ -46,13 +46,13 @@ namespace ThunderDesign.Net.SQLite.Bridges
             }
             finally
             {
-                _ReaderWriterLockSlim.ExitWriteLock();
+                _ReaderWriterLockSlim.EnterUpgradeableReadLock();
             }
         }
 
-        public override void Clear()
+        public new void Clear()
         {
-            _ReaderWriterLockSlim.EnterWriteLock();
+            _ReaderWriterLockSlim.EnterUpgradeableReadLock();
             try
             {
                 Task task = BridgeTable.ResetTableAsync();
@@ -65,11 +65,11 @@ namespace ThunderDesign.Net.SQLite.Bridges
             }
             finally
             {
-                _ReaderWriterLockSlim.ExitWriteLock();
+                _ReaderWriterLockSlim.ExitUpgradeableReadLock();
             }
         }
 
-        public override bool Remove(TKey key)
+        public new bool Remove(TKey key)
         {
             bool result = false;
 
@@ -78,19 +78,11 @@ namespace ThunderDesign.Net.SQLite.Bridges
             {
                 if (this.ContainsKey(key))
                 {
-                    _ReaderWriterLockSlim.EnterWriteLock();
-                    try
-                    {
-                        TValue value = this[key];
-                        Task<int> task = BridgeTable.DeleteRecordAsync(value);
-                        value.PropertyChanged -= OnChildPropertyChanged;
-                        result = base.Remove(key);
-                        task.ConfigureAwait(false).GetAwaiter().GetResult();
-                    }
-                    finally
-                    {
-                        _ReaderWriterLockSlim.ExitWriteLock();
-                    }
+                    TValue value = this[key];
+                    Task<int> task = BridgeTable.DeleteRecordAsync(value);
+                    value.PropertyChanged -= OnChildPropertyChanged;
+                    result = base.Remove(key);
+                    task.ConfigureAwait(false).GetAwaiter().GetResult();
                 }
             }
             finally
