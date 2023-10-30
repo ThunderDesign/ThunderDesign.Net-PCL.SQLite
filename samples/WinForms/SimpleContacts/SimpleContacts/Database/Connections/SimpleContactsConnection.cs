@@ -15,7 +15,7 @@ namespace SimpleContacts.Databases.Connections
         {
             get
             {
-                lock (_Locker)
+                lock (_InstanceLocker)
                 {
                     return _Instance ??= new SimpleContactsConnection();
                 }
@@ -24,6 +24,7 @@ namespace SimpleContacts.Databases.Connections
         #endregion
 
         #region variables
+        private readonly static object _InstanceLocker = new object();
         private const string _DatabaseFilename = "Contacts.db3";
         private static SimpleContactsConnection? _Instance = null;
         #endregion
