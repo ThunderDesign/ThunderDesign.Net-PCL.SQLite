@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <PackageReference Include="Sharpnado.Shadows" Version="1.2.0" />
+    <PackageReference Include="ThunderDesign.Net-PCL.Threading" Version="1.0.10" />
     <PackageReference Include="ThunderDesign.Xamarin.Forms.FloatingActionButton" Version="1.0.0" />
     <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.0" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />  

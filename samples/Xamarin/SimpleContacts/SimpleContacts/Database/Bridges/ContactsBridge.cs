@@ -17,7 +17,7 @@ namespace SimpleContacts.Database.Bridges
         {
             get
             {
-                lock (_Locker)
+                lock (_InstanceLocker)
                 {
                     return _Instance ??= new ContactsBridge();
                 }
@@ -26,7 +26,7 @@ namespace SimpleContacts.Database.Bridges
         #endregion
 
         #region variables
-        protected readonly static object _Locker = new object();
+        private readonly static object _InstanceLocker = new object();
         private static ContactsBridge _Instance = null;
         #endregion
     }

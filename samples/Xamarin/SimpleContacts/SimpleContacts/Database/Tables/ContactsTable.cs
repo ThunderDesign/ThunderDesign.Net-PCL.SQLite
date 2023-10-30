@@ -17,7 +17,7 @@ namespace SimpleContacts.Database.Tables
         {
             get
             {
-                lock (_Locker)
+                lock (_InstanceLocker)
                 {
                     return _Instance ??= new ContactsTable();
                 }
@@ -26,6 +26,7 @@ namespace SimpleContacts.Database.Tables
         #endregion
 
         #region variables
+        private readonly static object _InstanceLocker = new object();
         private static ContactsTable _Instance = null;
         #endregion
     }
