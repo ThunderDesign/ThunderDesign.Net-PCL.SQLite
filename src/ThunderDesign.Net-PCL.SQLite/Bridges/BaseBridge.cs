@@ -46,7 +46,7 @@ namespace ThunderDesign.Net.SQLite.Bridges
             }
             finally
             {
-                _ReaderWriterLockSlim.EnterUpgradeableReadLock();
+                _ReaderWriterLockSlim.ExitUpgradeableReadLock();
             }
         }
 
