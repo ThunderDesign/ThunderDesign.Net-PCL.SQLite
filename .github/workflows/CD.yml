@@ -48,7 +48,7 @@ jobs:
       run: msbuild ./src/${{ env.FILE_NAME}}.sln -t:pack /p:VersionPrefix=${{ github.event.release.tag_name }} /p:Configuration=Release /p:Title="${{ env.TITLE }}" /p:Description="${{ env.DESCRIPTION }}" /p:PackageTags="${{ env.TAGS }}" /p:Authors=ThunderDesign /p:PackageProjectUrl=${{ env.GITHUB_URL }} /p:PackageLicenseExpression=MIT /p:RepositoryType=git /p:RepositoryUrl=${{ env.REPOSITORY_URL }} /p:PackageReleaseNotes="See ${{ env.REPOSITORY_URL }}/releases/tag/${{ github.event.release.tag_name }}" /p:PackageOutputPath=${{ env.PACKAGE_OUTPUT_DIRECTORY}}
       
     - name: Archive NuGet Package
-      uses: actions/upload-artifact@v2.3.1
+      uses: actions/upload-artifact@v4
       with:
         name: Package_${{ env.FILE_NAME}}.${{ github.event.release.tag_name }}
         path: ${{ env.PACKAGE_OUTPUT_DIRECTORY}}\${{ env.FILE_NAME}}.${{ github.event.release.tag_name }}.nupkg
