@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using ThunderDesign.Net.SQLite.Interfaces;
 using ThunderDesign.Net.Threading.Objects;
+using ISQLiteConnection = ThunderDesign.Net.SQLite.Interfaces.ISQLiteConnection;
 
 namespace ThunderDesign.Net.SQLite.Connections
 {
