@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
-    <PackageReference Include="ThunderDesign.Net-PCL.Threading" Version="1.0.10" />
+    <PackageReference Include="ThunderDesign.Net-PCL.Threading" Version="2.1.0" />
     <PackageReference Include="ThunderDesign.Net-PCL.ToolBox" Version="1.0.4" />
   </ItemGroup>
 
